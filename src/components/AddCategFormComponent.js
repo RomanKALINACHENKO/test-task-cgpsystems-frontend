@@ -8,7 +8,7 @@ function AddCategFormComponent(props) {
   const addCategoryHandler = props.addCategoryHandler
   const addCategoryRequest = async(body)=>{
     try { 
-    const fetchedData = await request(`${process.env.REACT_APP_API}/api/categories/createcategory`, 'POST', body)
+    const fetchedData = await request(`/api/categories/createcategory`, 'POST', body)
       const data = fetchedData
       addCategoryHandler(data)
     console.log(data)
