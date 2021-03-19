@@ -6,7 +6,7 @@ function AddTodoFormComponent(props) {
   const addNoteHandler = props.addNoteHandler
   const addTodoRequest = async(body)=>{
     try { 
-    const fetchedData = await request(`${process.env.REACT_APP_API}/api/notes/createnote`, 'POST', body)
+    const fetchedData = await request(`/api/notes/createnote`, 'POST', body)
       const data = fetchedData
       addNoteHandler()
     console.log(data)
