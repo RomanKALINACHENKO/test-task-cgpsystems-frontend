@@ -1,0 +1,20 @@
+.headerTodo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+
+}
+
+.todoBlock{
+
+  
+  display: block;
+  width: 100%;
+
+}
+
+.contentTodo{
+  font-weight: 400;
+  font-style: oblique;
+}
