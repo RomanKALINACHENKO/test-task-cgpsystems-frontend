@@ -30,7 +30,7 @@ function Notes (props){
     const editNoteHandler = props.editNoteHandler
     const editNoteRequest = async(body)=>{
       try { 
-      const fetchedData = await request(`/api/notes/updatenote`, 'PUT', body)
+      const fetchedData = await request(`${process.env.REACT_APP_API}/api/notes/updatenote`, 'PUT', body)
         const data = fetchedData
         console.log(data)
         editNoteHandler()
@@ -42,7 +42,7 @@ function Notes (props){
 
     const deleteNoteRequest = async(body)=>{
         try { 
-        const fetchedData = await request(`/api/notes/deletenote`, 'DELETE', body)
+        const fetchedData = await request(`${process.env.REACT_APP_API}/api/notes/deletenote`, 'DELETE', body)
           const data = fetchedData
           console.log(data)
           editNoteHandler()
