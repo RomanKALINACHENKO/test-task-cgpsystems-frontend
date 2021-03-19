@@ -17,7 +17,7 @@ function App() {
   const {request} = useHttp()
   const getNotesData = useCallback( async()=>{
     try { 
-    const fetchedData = await request(`/api/notes/${category?category:'all'}`, 'GET', null, {})
+    const fetchedData = await request(`${process.env.REACT_APP_API}/api/notes/${category?category:'all'}`, 'GET', null, {})
       const data = fetchedData
        setNotes(data.notes)
        setCategories(data.categories)
